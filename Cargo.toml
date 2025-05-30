@@ -1,6 +1,6 @@
 [package]
-name = "audioadapter"
-version = "0.5.0"
+name = "audioadapter-sample"
+version = "1.0.0"
 edition = "2021"
 rust-version = "1.74"
 authors = ["HEnquist <henrik.enquist@gmail.com>"]
@@ -20,11 +20,3 @@ audio = ["audio-core"]
 num-traits = "0.2.15"
 audio-core = { version = "0.2.0", optional = true }
 
-
-[dev-dependencies]
-criterion = "0.5"
-audio = "0.2.0"
-
-[[bench]]
-name = "iteration"
-harness = false
