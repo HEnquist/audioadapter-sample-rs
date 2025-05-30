@@ -1,13 +1,13 @@
 [package]
-name = "audioadapter"
-version = "0.5.0"
+name = "audioadapter-sample"
+version = "1.0.0"
 edition = "2021"
 rust-version = "1.74"
 authors = ["HEnquist <henrik.enquist@gmail.com>"]
-description = "A library for making it easier to work with buffers of audio data"
+description = "A library for making it easier to work with audio data"
 license = "MIT"
 repository = "https://github.com/HEnquist/audioadapter-rs"
-keywords = ["audio", "buffer", "dsp", "sample", "pcm"]
+keywords = ["audio", "dsp", "sample", "pcm"]
 categories = ["multimedia::audio"]
 readme = "README.md"
 
