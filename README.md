@@ -114,6 +114,8 @@ with on-the-fly conversion between bytes and the numerical values.
 
 Example
 ```rust
+# #[cfg(feature = "std")]
+# {
 use audioadapter_sample::sample::I16LE;
 use audioadapter_sample::readwrite::ReadSamples;
 
@@ -123,6 +125,7 @@ let data: Vec<u8> = vec![1, 2, 3, 4];
 let mut slice = &data[..];
 // read the first value as 16 bit integer, convert to f32.
 let float_value = slice.read_converted::<I16LE, f32>();
+# }
 ```
 
 ## Optional compatibility with the [audio](https://crates.io/crates/audio) crate
