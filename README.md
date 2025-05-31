@@ -111,6 +111,7 @@ The [std::io::Read] and [std::io::Write] traits are useful for reading
 and writing raw bytes to and from for example files.
 The [readwrite] module extends these traits by providing methods for reading and writing samples,
 with on-the-fly conversion between bytes and the numerical values.
+This functionality depends on the standard library ans is gated by the `std` Cargo feature.
 
 Example
 ```rust
@@ -128,8 +129,15 @@ let float_value = slice.read_converted::<I16LE, f32>();
 # }
 ```
 
-## Optional compatibility with the [audio](https://crates.io/crates/audio) crate
+## Compatibility with the [audio](https://crates.io/crates/audio) crate
 The wrappers for bytes implement the [audio_core::Sample] trait from the [audio](https://crates.io/crates/audio) crate.
 This is controlled by the `audio` feature which is enabled by default.
+
+## Cargo features
+This crate has the following features:
+ - `std` enables the standard library.
+ - `audio` enables `audio` crate compatibility.
+
+Both features are enabled by default.
 
 ## License: MIT
